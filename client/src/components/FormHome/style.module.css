@@ -1,0 +1,212 @@
+.div_dinamic_form {
+
+    background: linear-gradient(to bottom, rgba(36, 81, 198, 1), rgba(13, 80, 255, 1));
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 0;
+    border-radius: 12px;
+    margin: 0 auto;
+    overflow: auto;
+    margin-inline: 32px;
+}
+
+.h1_Form {
+
+    font-size: 64px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.dogs_and_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    gap: 16px;
+
+}
+
+.div_img_dogs {
+    display: flex;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+.img_dogs {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 0;
+
+}
+
+.dinamic_Form {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 296px;
+
+}
+
+.inputForm {
+    max-width: 516px;
+    height: 58px;
+    margin-bottom: 10px;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    outline: none;
+    font-size: 18px;
+}
+
+.inputForm::placeholder {
+    color: white;
+    font-size: 20px;
+
+}
+
+
+.btn_form {
+    max-width: 516px;
+    height: 58px;
+    padding: 10px;
+    background-color: #fefefe;
+    color: rgba(40, 40, 40, 1);
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn_form:hover {
+    background-color: #282828;
+    color: #fefefe;
+}
+
+.btn_form::after {
+    background-color: white;
+    color: blue;
+    border: 1px solid #282828;
+}
+
+.error_message {
+    color: rgb(254, 252, 252);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .dinamic_Form {
+        width: 70%;
+    }
+
+    .div_img_dogs {
+        margin-bottom: 0;
+        align-items: flex-end;
+    }
+
+    .div_dinamic_form {
+        padding: 17px 17px 0;
+        border-radius: 12px;
+        margin: 0 auto;
+        overflow: auto;
+    }
+
+    .img_dogs {
+        width: 500px;
+    }
+
+    .btn_form {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .dinamic_Form {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .h1_Form {
+        font-size: 44px;
+    }
+
+    .img_dogs {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .div_dinamic_form {
+        padding: 12px 12px 0;
+        border-radius: 12px;
+        margin-inline: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .h1_Form {
+        font-size: 2em;
+    }
+
+    .img_dogs {
+        display: none;
+    }
+
+    .inputForm::placeholder {
+        font-size: 16px;
+    }
+
+    .div_img_dogs {
+        flex-basis: 0;
+    }
+
+    .dinamic_Form {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+
+}
+
+
+
+@media (max-width: 576px) {
+
+    .div_dinamic_form {
+        justify-content: center;
+        margin: 0 10px;
+
+    }
+
+    .inputForm {
+        width: auto;
+        margin: 5px auto;
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+
+    .h1_Form {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .btn_form {
+        width: 35%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+}

@@ -1,0 +1,161 @@
+.container {
+    margin: 80px 40px 106px 40px;
+
+}
+
+.category_Page_Header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.homePageBtn,
+.categoryesPageBtn,
+.categoryPageBtn {
+    padding: 8px 16px;
+    /* Правильный синтаксис для padding */
+    border: 1px solid rgba(221, 221, 221, 1);
+    background-color: #fff;
+    color: rgba(139, 139, 139, 1);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    white-space: nowrap;
+
+
+}
+
+.categoriesPageBtn:not(:last-child) {
+    margin-right: 16px;
+    /* Отступ для всех кнопок, кроме последней */
+}
+
+.homePageBtn:hover,
+.categoryesPageBtn:hover,
+.categoryPageBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+.categoriesPageBtn.active {
+    background-color: rgba(221, 221, 221, 1);
+    color: rgba(40, 40, 40, 1);
+}
+
+.btnLine {
+    height: 1px;
+    background-color: rgba(221, 221, 221, 1);
+    width: 16px;
+
+}
+
+
+
+.h2_category_page {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    margin: 40px 10px;
+}
+
+
+.product_Card_Container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 16px;
+    width: 100%;
+
+
+}
+
+.product_Card {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(221, 221, 221, 1);
+}
+
+.product_image {
+    width: 100%;
+    height: auto;
+}
+
+.h3_sales_page {
+    margin: 20px 32px 17px 32px;
+
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product_Card {
+    position: relative;
+
+}
+
+.product_D_Price {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 16px 0px 32px;
+}
+
+.price_product {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    margin-bottom: 32px;
+}
+
+.product_Price {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(139, 139, 139, 1);
+    margin-bottom: 4px;
+}
+
+
+
+.product_lable {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: rgba(13, 80, 255, 1);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: max-content;
+    padding: 4px 8px;
+    margin: 4px 8px;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+
+    .h2_categories_home {
+
+        font-size: 48px;
+        margin: 30px 8px;
+    }
+
+    .categories_Card_Container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, 2fr));
+        gap: 16px;
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .h2_categories_home {
+
+        font-size: 32px;
+        margin: 20px 8px;
+    }
+}
+
+
+
+@media (max-width: 417px) {}
