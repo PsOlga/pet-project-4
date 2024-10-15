@@ -2,6 +2,7 @@ import styles from "./style.module.css";
 import { useSelector } from "react-redux";
 import { Link, Button } from "@mui/material";
 import API_URL from "../../utils/api";
+import ProductCard from "../ProductCart";
 
 function ProductsHome () {
     const { products } = useSelector((state) => state.products);
@@ -26,7 +27,7 @@ function ProductsHome () {
           <div className={styles.btn_div}>
             <Link do="/pages/ProductsAll">
               <Button
-                // className={styles.btn_products_home}
+            
                 sx={{
                   color: "rgba(139, 139, 139, 1)",
                   border: "1px solid rgba(139, 139, 139, 1)",
@@ -46,35 +47,9 @@ function ProductsHome () {
   <div className={styles.product_Card_Container}>
   
           {randomCategories.map((product) => (
-            <div key={product?.id} 
-            className={styles.product_Card}>
-              {/* Отображение картинки */}
-              <img 
-                src={`${API_URL}/${product?.image}`}  
-                alt={product?.title} 
-                className={styles.product_image} 
-                style={{ width: "150px", height: "150px" }}
-              />
-             <div >
-             <h3  className={styles.product_h3} >{product?.title}</h3>
-             <div className={styles.price_product}>
-             <p className={styles.product_D_Price}>
-                        ${product?.discont_price ? product?.discont_price : product?.price}
-                    </p>
-                    <div className={styles.product_Price}>
-                {product?.discont_price && <p className={styles.productPrice}>${product?.price}</p>}
-                </div>
-             </div>
-
-            
-               {product?.discont_price && (
-                <p   className={styles.product_lable} >-{Math.round(((product?.price - product?.discont_price) * 100) / product?.price)}%
-                </p>
-               )}
-            
-             </div>
-             
-            </div>
+        
+          <ProductCard product={product}/>  
+           
           ))}
         </div>
   </div>

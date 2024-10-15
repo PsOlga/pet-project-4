@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from "./style.module.css";
 
-function AddButtonBlue({ onClick }) {
+function AddButtonBlue({ onClick, className }) {
   const [state, setState] = useState('normal');
 
   const handleClick = (e) => {
@@ -14,7 +14,7 @@ function AddButtonBlue({ onClick }) {
 
   return (
     <button
-      className={`${styles.addBlueButton} ${state === 'added' ? styles.addedState : ''}`}
+      className={`${styles.addBlueButton} ${state === 'added' ? styles.addedState : ''} ${className}`}
       onClick={handleClick}
     >
       {state === 'added' ? 'Added' : 'Add to cart'}

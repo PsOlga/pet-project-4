@@ -74,3 +74,18 @@ export const filtredProducts = createSelector(
     }
 )
 
+export const selectProductById = createSelector(
+    (state) => state?.products?.products,
+    (state) => state?.cartReducer?.cartProducts,
+    (state, productId) => productId,
+    (products, cartProducts, productId) => {
+        const productInCart = cartProducts?.find((item) => item.id === Number(productId));
+        if (productInCart) {
+            return productInCart;
+        } else {
+            return products.find((item) => {
+                return item.id === Number(productId);
+            });
+        }
+    }
+)

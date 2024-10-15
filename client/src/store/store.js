@@ -4,7 +4,7 @@ import { combineReducers } from 'redux';
 import productsReducer from './productsSlice';
 import filterReducer from "./filterSlice";
 import cartReducer  from './cartSlice';
-
+import {localCartMiddleware} from "../middlewares/localCartMiddleware";
 const mainReducer = combineReducers ({
   categories: categoriesReducer,
   products: productsReducer,
@@ -14,6 +14,8 @@ const mainReducer = combineReducers ({
 
 const store = configureStore({
   reducer: mainReducer,
+  middleware:(getDefaultMiddleware ) => getDefaultMiddleware()
+  .concat(localCartMiddleware)
 });
 
 export default store;
