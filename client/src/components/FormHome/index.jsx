@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./style.module.css";
 import imgDogs from "../../assets/form/Dogs.png";
-
+// import { useState } from "react";
+// import { Modal } from "@mui/material";
 function FormHome() {
   const {
     register,
@@ -18,7 +19,8 @@ function FormHome() {
 
   // Функция обработки отправки формы
   function onSubmit(data) {
-    console.log("Данные формы:", data);
+    // setModalMessage('Congratulations! You received a bonus of 5%.');
+    // setShowModal(true);
   }
 
   const nameValue = watch("Name");
@@ -29,12 +31,12 @@ function FormHome() {
       if (nameValue?.length > 20) {
         setError("Name", {
           type: "maxLength",
-          message: "Длина имени не должна быть больше 20 символов",
+          message: "The name length should not be more than 20 characters",
         });
       } else if (nameValue?.length > 0 && nameValue?.length < 3) {
         setError("Name", {
           type: "minLength",
-          message: "Имя не должно быть менее 3 символов",
+          message: "The name must not be less than 3 characters",
         });
       } else {
         clearErrors("Name");
@@ -43,6 +45,7 @@ function FormHome() {
 
     return () => subscription.unsubscribe();
   }, [nameValue, setError, clearErrors, watch]);
+
 
   return (
     <div className={styles.div_dinamic_form}>
@@ -65,15 +68,15 @@ function FormHome() {
           {...register("Name", {
             required: {
               value: true,
-              message: "Это поле обязательно для заполнения",
+              message: "This field is required",
             },
             minLength: {
               value: 3,
-              message: "Имя не должно быть менее 3 символов",
+              message: "The name must not be less than 3 characters",
             },
             maxLength: {
               value: 20,
-              message: "Длина имени не должна быть больше 20 символов",
+              message: "The name length should not be more than 20 characters",
             },
           })}
           type="text"
@@ -88,11 +91,11 @@ function FormHome() {
           {...register("phoneNumber", { 
             required: {
               value: true,
-              message: "Это поле обязательно для заполнения",
+              message: "This field is required",
             },
             minLength: {
               value: 8,
-              message: "Номер должен быть не менее 8 символов",
+              message: "The number must be at least 8 characters",
             },
           })}
           type="text"
@@ -107,7 +110,7 @@ function FormHome() {
           {...register("Email", { 
             required: {
               value: true,
-              message: "Это поле обязательно для заполнения",
+              message: "This field is required",
             },
           })}
           type="email"
@@ -115,12 +118,11 @@ function FormHome() {
           placeholder="Email"
          
         />
-        {/* Сообщения об ошибках для поля "Email"
-        {errors.Email && <p className={styles.error_message_pas}>{errors.Email.message}</p>} */}
 
         <button type="submit" className={styles.btn_form}>Get Discount</button>
       </form>
         </div>
+       
     </div>
   );
 }

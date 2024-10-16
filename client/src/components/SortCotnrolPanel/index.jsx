@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { setFilter, toggleDiscount } from "../../store/filterSlice";
 import { filter } from "../../store/selectors";
-import CustomSelect from "../CustomSelect";
+import CustomSelect from "../Filters/CustomSelect";
 import styles from "./style.module.css";
 
 // этот объект отвечает за все поля селектроа
@@ -48,14 +48,16 @@ function SortControlPanel ({shouDiscountChecbox = true}) {
 
    return (
     <div className={styles.container}>
-        <div>
+        <div className={styles.filter_price_div}>
+                <span>
+                    Price
+                </span>
+                <div className={styles.price_input_div}>
             <label 
                 className={styles.labelAll}
                 htmlFor="priceFromInput"
             >
-                <span>
-                    Price
-                </span>
+              
                 <input 
                 className={styles.input_price}
                 type="number" 
@@ -74,13 +76,14 @@ function SortControlPanel ({shouDiscountChecbox = true}) {
              onChange={onChangePriceTo}  />
 
             </label>
+            </div>
         </div>
-        <div  className={styles.checkboxDiv}>
+        <div  className={styles.checkbox_div}>
         {shouDiscountChecbox && (
             <label 
-            className={styles.labelAll}
+            className={styles.labelCheckbox}
             htmlFor="discountItemsCheckbox">
-                <span   className={styles.span}>
+                <span >
                     Discounted items
                 </span>
                 <input 
@@ -95,7 +98,7 @@ function SortControlPanel ({shouDiscountChecbox = true}) {
         </div>
         <div className={styles.sorted}>
         <label 
-        className={styles.labelAll}
+        className={styles.label_sorted}
         htmlFor="sortedBy">
             <span>
                 Sorted

@@ -29,13 +29,13 @@ function CategoriesAll ()
     
               <div className={styles.categoriesPageHeader}>
                 <Link to="/">
-                  <button className={`categoriesPageBtn ${isCurrentPage('/') ? 'active' : ''}`}>
+                  <button className={`${styles.categoriesPageBtn} ${isCurrentPage('/') ? 'active' : ''}`}>
                     Main Page
                   </button>
                 </Link>
                 <div className={styles.btnLine}></div>
                 <Link to="/categoriesAll">
-                  <button className={`categoriesPageBtn ${isCurrentPage('/categoriesAll') ? 'active' : ''}`}>
+                  <button className={`${styles.categoriesPageBtn} ${isCurrentPage('/categoriesAll') ? 'active' : ''}`}>
                     All categories
                   </button>
                 </Link>
@@ -50,7 +50,9 @@ function CategoriesAll ()
                       onClick={() => handleCategoryClick(category.id)}
                     >
                       {category.image ? (
-                        <img src={`${API_URL}${category.image}`} alt={category.title} className={styles.categoriesPageImage} />
+                        <img src={`${API_URL}${category.image}`} 
+                        alt={category.title} 
+                        className={styles.categoriesPageImage} />
                       ) : (
                         <div className={styles.placeholderImage}>No Image</div>
                       )}

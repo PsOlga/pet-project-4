@@ -7,7 +7,7 @@ import styles from "./style.module.css";
 import FormCart from '../../components/FormCard';
 import API_URL from '../../utils/api';
 import {decreaseQuantity, increaseQuantity, removeProductFromCart} from "../../store/cartSlice";
-import Modal from '../../components/CustomModal';
+
 export default function CartPage() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartReducer.cartProducts);
@@ -90,21 +90,20 @@ const handleRemove = ( event, id) => {
                     <div className={styles.CartPage_itemInfo_leftPrice}>
                       <div className={styles.CartPage_itemInfo_leftBtnCounter}>
                         <button
-                          style={{ zIndex: 1 }}
+                        className={styles.btn_minus}
                           onClick={(event) => decrementQuantity(event, item.id)}
                         >
                           -
                         </button>
-                        <input
-                          style={{ position: "relative", right: "5px" }}
-                          type="number"
-                          min="1"
-                        //   onChange={(e) => handleChangeInput(item.id, e.target.value)}
-                          value={item.quantity}
-                        />
-                        {/* <span>{item.quantity}</span> */}
+                      
+                          <span   
+                            className={styles.count_span}>
+                       
+                          {item.quantity}
+                          </span>
+                      
                         <button
-                          style={{ position: "relative", right: "10px" }}
+                          className={styles.btn_plus}
                           onClick={(event) => incrementQuantity(event, item.id)}
                         >
                           +

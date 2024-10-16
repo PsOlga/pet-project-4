@@ -28,14 +28,14 @@
 
 .categoriesPageBtn:not(:last-child) {
     margin-right: 16px;
-    /* Отступ для всех кнопок, кроме последней */
+
 }
 
 .homePageBtn:hover,
 .categoryesPageBtn:hover,
 .categoryPageBtn:hover {
-    background-color: black;
-    color: white;
+    background-color: rgba(221, 221, 221, 1);
+    color: rgba(139, 139, 139, 1);
 }
 
 .categoriesPageBtn.active {

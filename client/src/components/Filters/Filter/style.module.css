@@ -19,7 +19,8 @@
     font-weight: 600;
 }
 
-.filter_Price input {
+.price_block_2,
+.price_block_1 {
     max-width: 112px;
     width: 100%;
     height: 36px;
@@ -33,9 +34,7 @@
     min-width: 50px;
 }
 
-/* Медиазапросы для различных разрешений */
 
-/* Для экранов шириной менее 1200px */
 @media (max-width: 1200px) {
     .filter_Price {
         flex-direction: column;
@@ -43,91 +42,87 @@
         gap: 12px;
     }
 
-    .
-    /* .filter_Price {
-     display: flex;
-     gap: 16px;
-     justify-content: center;
-     flex-wrap: wrap;
 
- }
+    .filter_Price {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
 
- .filter_Price {
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     gap: 8px;
- }
+    }
 
- .filter_Price span {
-     font-weight: 600;
- }
+    .filter_Price {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
 
- .filter_Price input {
-     max-width: 112px;
-     width: 100%;
-     height: 36px;
-     font-size: 16px;
-     font-weight: 500;
-     color: #282828;
-     padding: 0 8px 0 16px;
-     border-radius: 6px;
-     border: 1px solid #DDDDDD;
-     flex-grow: 1;
-     min-width: 50px;
- }
+    .filter_Price span {
+        font-weight: 600;
+    }
 
- @media (max-width: 1200px) {
-     .filter_Price {
-         flex-direction: column;
-         align-items: flex-start;
-         gap: 12px;
-     }
+    .price_block_1,
+    .price_block_2 {
+        max-width: 112px;
+        width: 100%;
+        height: 36px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #282828;
+        padding: 0 8px 0 12px;
+        border-radius: 6px;
+        border: 1px solid #DDDDDD;
+        flex-grow: 1;
+        min-width: 50px;
+    }
 
-     .filter_Price {
-         flex-direction: column;
-         Лейбл и инпут в одну колонку 
-         align-items: flex-start;
-         width: 100%;
-     }
+    @media (max-width: 1200px) {
+        .filter_Price {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            width: 100%;
+        }
 
-     .filter_Price input {
-         max-width: 100%;
-       
-         height: 24px;
-         font-size: 12px;
-         padding: 0 8px;
-     }
- }
 
- @media (max-width: 768px) {
-     .filter_Price {
-         gap: 10px;
-     }
+        .price_block_1,
+        .price_block_2 {
+            max-width: 100%;
+            height: 24px;
+            font-size: 12px;
+            padding: 0 8px;
+        }
+    }
 
-     .filter_Price input {
-         max-width: 100%;
-     }
- }
+    @media (max-width: 768px) {
+        .filter_Price {
+            gap: 10px;
+        }
 
- @media (max-width: 576px) {
-     .filter_Price {
-         gap: 8px;
-     }
+        .filter_Price input {
+            max-width: 100%;
+        }
+    }
 
-     .filter_Price input {
-         max-width: 100%;
-     }
- }
+    @media (max-width: 576px) {
+        .filter_Price {
+            gap: 8px;
+        }
 
- @media (max-width: 417px) {
-     .filter_Price {
-         gap: 6px;
-     }
+        .filter_Price input {
+            max-width: 100%;
+        }
+    }
 
-     .filter_Price input {
-         max-width: 100%;
-     }
- }
+    @media (max-width: 417px) {
+        .filter_Price {
+            gap: 6px;
+        }
 
- 
+        .filter_Price input {
+            max-width: 100%;
+        }
+    }
+
+}

@@ -22,6 +22,13 @@
     color: #FFFFFF;
 }
 
+.addBlueButton:disabled {
+    background-color: white;
+    color: #282828;
+    cursor: initial;
+}
+
+
 .addBlueButton:active {
     background-color: #FFFFFF;
     color: #282828;

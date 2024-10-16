@@ -1,0 +1,43 @@
+.iconWrapper {
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+
+
+.CartIcon {
+    color: #282828;
+    transition: color 0.5s;
+}
+
+.CartIcon:hover {
+    color: #007bff;
+}
+
+.iconWrapperHovered {
+    color: #007bff;
+}
+
+.badge {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background-color: #007bff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge:hover {
+    color: red;
+}
+
+.badgeText {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+}

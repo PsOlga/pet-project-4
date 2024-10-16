@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./style.module.css"
 import logo from "../assets/header-img/logo.svg";
 import basket from "../assets/header-img/Basket.svg"
+import CartComponent from "../components/CartComponent";
 
 
 const Header = () => {
@@ -22,9 +23,7 @@ const Header = () => {
         <Link to="/salesAll" className={styles.linkHeader}>All sales</Link>
       </nav>
       <div className={styles.basketHeader}>
-      <Link to="/cart">
-        <img src={basket} alt="basket"></img>
-        </Link>
+      <CartComponent />
       </div>
     </header>
   );

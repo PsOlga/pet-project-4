@@ -5,7 +5,7 @@ import { openModal } from '../../store/modalSlice';
 import { clearCart } from '../../store/cartSlice'; 
 import axios from "axios";
 import API_URL from "../../utils/api";
-import { TextField, Button, Snackbar, Alert, CircularProgress,  } from "@mui/material";
+import { TextField, Button, Snackbar, Alert, CircularProgress, Modal } from "@mui/material";
 import styles from "./style.module.css";
 
 function FormCart({ orderData, form = {}, onInputChange }) {
@@ -152,11 +152,14 @@ function FormCart({ orderData, form = {}, onInputChange }) {
             {isSubmitted ? "The Order is Placed" : isLoading ? "Submitting..." : "Order"}
           </Button>
         </form>
+        <div className={styles.divSnackbar}>
         {showAlert && (
           <Snackbar open={showAlert}>
             <Alert severity="success">Form submitted successfully!</Alert>
           </Snackbar>
+         
         )}
+        </div>
       </div>
     );
   }

@@ -1,11 +1,12 @@
 import styles from "./style.module.css";
 import { useSelector } from "react-redux";
-import { Link, Button } from "@mui/material";
-import API_URL from "../../utils/api";
+import {  Button } from "@mui/material";
 import ProductCard from "../ProductCart";
+import { Link } from "react-router-dom";
+import { filtredProducts } from "../../store/selectors";
 
 function ProductsHome () {
-    const { products } = useSelector((state) => state.products);
+    const  products  = useSelector(filtredProducts);
   
     // Функция для получения случайных товаров
     const getRandomProducts = (products, num) => {
@@ -25,7 +26,7 @@ function ProductsHome () {
     
           <div className={styles.linie}></div>
           <div className={styles.btn_div}>
-            <Link do="/pages/ProductsAll">
+            <Link to="/salesAll">
               <Button
             
                 sx={{
@@ -47,9 +48,9 @@ function ProductsHome () {
   <div className={styles.product_Card_Container}>
   
           {randomCategories.map((product) => (
-        
+      
           <ProductCard product={product}/>  
-           
+     
           ))}
         </div>
   </div>

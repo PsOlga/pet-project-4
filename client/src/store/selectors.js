@@ -7,7 +7,7 @@ export const filter = (state) => state.filter;
 
 const cartSlice = (state) => state.cartReducer;
 console.log(cartSlice)
-const cart = createSelector(cartSlice, (state) => state.cartProducts);
+export const cart = createSelector(cartSlice, (state) => state.cartProducts);
 
 export const categories = (state) => state.categories.categories;
 export const currentCategoryTitle = createSelector(categories,

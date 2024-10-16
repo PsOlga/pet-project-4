@@ -1,12 +1,15 @@
 
 import styles from "./style.module.css";
-import {Button, Link} from "@mui/material";
-
+import {Button} from "@mui/material";
+import { Link } from "react-router-dom";
 
 function Banner () {
+
+  
+  
     return <div className={styles.divBanner}>
     <h1 className={styles.h1_Banner}> Amazing Discounts on Pets Products!</h1>
-    <Link>
+    <Link to="/salesAll">
   <Button
     sx={{
       ml: '40px', // margin-left

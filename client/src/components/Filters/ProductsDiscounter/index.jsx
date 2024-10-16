@@ -24,7 +24,7 @@ const DiscountedItems = ({ searchParams, setSearchParams }) => {
         checked={includeDiscount}
         onChange={handleCheckboxChange}
       />
-      <span></span>
+     
     </label>
   );
 };

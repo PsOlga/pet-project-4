@@ -26,8 +26,8 @@
 
 .homePageBtn:hover,
 .salesPageBtn:hover {
-    background-color: black;
-    color: white;
+    background-color: rgba(221, 221, 221, 1);
+    color: rgba(139, 139, 139, 1);
 }
 
 .homePageBtn:active,

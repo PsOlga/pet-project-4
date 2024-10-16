@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import API_URL from "../../utils/api";
+
 import SortControlPanel from "../../components/SortCotnrolPanel";
 import { filtredProducts } from "../../store/selectors";
 import ProductCard from "../../components/ProductCart";

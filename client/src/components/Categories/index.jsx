@@ -1,8 +1,9 @@
 
-
-import { Button, Link } from "@mui/material";
+import API_URL from "../../utils/api";
+import { Button } from "@mui/material";
 import styles from "./style.module.css";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function CategorieHome() {
   const { categories } = useSelector((state) => state.categories);
@@ -24,7 +25,7 @@ function CategorieHome() {
         </div>
         <div className={styles.linie}></div>
         <div className={styles.btn_div}>
-          <Link do="/pages/CategoriesAll">
+          <Link to="/categoriesAll">
             <Button
               className={styles.btn_categories_home}
               sx={{
@@ -49,22 +50,29 @@ function CategorieHome() {
           </Link>
         </div>
       </div>
+       
 <div className={styles.categories_Card_Container}>
 
-        {randomCategories.map((product) => (
-          <div key={product?.id} 
+        {randomCategories.map((category) => (
+    
+          <Link 
+          to={`/categoriesAll/${category.id}`}
+          key={category?.id} 
           className={styles.categories_Card}>
             {/* Отображение картинки */}
             <img 
-              src={`http://localhost:3333${product?.image}`}  
-              alt={product?.title} 
+              src={`${API_URL}${category?.image}`}  
+              alt={category?.title} 
               className={styles.categories_image} 
             />
             {/* Отображение заголовка */}
             <h3  className={styles.categories_card_h3} 
-            >{product?.title}</h3>
-          </div>
+            >{category?.title}</h3>
+          
+          </Link>
+   
         ))}
+         
       </div>
 </div>
       

@@ -5,3 +5,32 @@
     flex-direction: row;
 
 }
+
+.customCheckbox {
+    border: 1px solid rgba(221, 221, 221, 1);
+    width: 36px;
+    height: 36px;
+    border-radius: 3px;
+}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 768px) {
+    .customCheckbox {
+
+        width: 24px;
+        height: 24px;
+    }
+
+    .discountedItems {
+
+        align-items: center;
+
+        flex-direction: row;
+
+    }
+}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 417px) {}

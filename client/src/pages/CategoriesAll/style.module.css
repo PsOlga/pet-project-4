@@ -1,7 +1,7 @@
-.btnLine {
+/* .btnLine {
     border: 2px solid rgba(221, 221, 221, 1);
 
-}
+} */
 
 .containerCategories {
     max-width: 1440px;
@@ -13,14 +13,69 @@
 }
 
 .categoriesPageHeader {
-    width: 100%;
+    /* width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 20px;
     margin-left: 40px;
-    padding: 0;
+    padding: 0; */
+    display: flex;
+    align-items: center;
 }
+
+.container {
+    margin: 80px 40px 106px 40px;
+
+}
+
+/* .products_Page_Header {
+    display: flex;
+    align-items: center;
+} */
+
+.categoriesPageBtn,
+.homePageBtn {
+    padding: 10px 20px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    background-color: #fff;
+    color: rgba(139, 139, 139, 1);
+    cursor: pointer;
+    margin: 0;
+    padding: 8px, 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+
+.categoriesPageBtn:hover,
+.homePageBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.homePageBtn eBtn.active {
+    background-color: rgba(221, 221, 221, 1);
+    /* фон при активации */
+    color: rgba(40, 40, 40, 1);
+    /* Белый текст при активации */
+}
+
+.btnLine {
+    height: 1px;
+    background-color: rgba(221, 221, 221, 1);
+    width: 16px;
+}
+
+
+
+
+
+
 
 .categoriesHeaderTitle {
     font-family: 'Montserrat', sans-serif;
@@ -28,18 +83,7 @@
     margin: 40px 10px;
 }
 
-body.dark-mode .categoriesHeaderTitle {
-    color: #DDDDDD;
-}
 
-.btnLine {
-    width: 16px;
-    height: 50%;
-    border-bottom: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .categoriesPageGrid {
     display: grid;
@@ -103,12 +147,9 @@ body.dark-mode .categoriesHeaderTitle {
     color: #282828;
 }
 
-body.dark-mode .categoriesPageBtn.active {
-    color: #EDEEEE;
-}
-
 .categoriesPageBtn:hover {
     background-color: #EDEEEE;
+    color: rgba(139, 139, 139, 1);
 }
 
 @media (max-width: 1200px) {
@@ -124,9 +165,7 @@ body.dark-mode .categoriesPageBtn.active {
 }
 
 @media (max-width: 768px) {
-    .categoriesPageHeader {
-        display: none;
-    }
+    .categoriesPageHeader {}
 }
 
 @media (max-width: 576px) {
@@ -134,9 +173,7 @@ body.dark-mode .categoriesPageBtn.active {
         grid-template-columns: 1fr;
     }
 
-    .categoriesPageBtn {
-        display: none;
-    }
+    .categoriesPageBtn {}
 
     .categoriesPage h3 {
         font-size: 40px;
