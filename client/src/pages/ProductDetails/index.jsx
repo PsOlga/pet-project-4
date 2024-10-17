@@ -7,7 +7,7 @@ import AddButtonBlue from '../../components/buttons/AddButonBlue';
 import Modal from '../../components/CustomModal';
 import API_URL from "../../utils/api";
 import  { addProductToCart } from "../../store/cartSlice";
-import { selectProductById } from '../../store/selectors';
+import { selectProductById, currentCategoryTitle } from '../../store/selectors';
 
 
 const ProductDetails = () => {
@@ -25,6 +25,8 @@ const ProductDetails = () => {
 const productFromState = useSelector( (state)=> selectProductById(state, productId) );
 const [product, setProduct] = useState(null);
 const isInCart = Boolean(productFromState?.quantity);
+const categoryTitle = useSelector((state) => currentCategoryTitle(state, product?.categoryId));
+
 useEffect(() => {
   if (productFromState) {
     setProduct(isInCart ? productFromState : {...productFromState, quantity: 1})
@@ -62,7 +64,7 @@ const handleClick = (_, product) => {
 
   return (
     <div className={styles.productDetailsBox}>
-      <div className={styles.categoriesPageHeader}>
+      <div className={styles.category_Page_Header}>
       <Link to="/">
           <button className={`${styles.homePageBtn} ${isCurrentPage('/') ? styles.active : ''}`}>
             Main Page
@@ -77,13 +79,13 @@ const handleClick = (_, product) => {
         <div className={styles.btnLine}></div>
         <Link to="/categoriesAll/:categoryId">
           <button className={`${styles.categoryPageBtn} ${isCurrentPage('/categoriesAll/:categoryId') ? styles.active : ''}`}>
-          Dry & Wet Food
+          {categoryTitle}
           </button>
         </Link>
         <div className={styles.btnLine}></div>
         <Link to="/productAll/:productId">
           <button className={`${styles.productPageBtn} ${isCurrentPage('/productAll/:productId') ? styles.active : ''}`}>
-          {productId}
+          {product?.title}
 
           </button>
         </Link>
