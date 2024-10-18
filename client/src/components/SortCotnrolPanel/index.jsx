@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-
 import { setFilter, toggleDiscount } from "../../store/filterSlice";
 import { filter } from "../../store/selectors";
 import CustomSelect from "../Filters/CustomSelect";
@@ -108,6 +107,7 @@ function SortControlPanel ({shouDiscountChecbox = true}) {
                 value={customFilter.sort}
                 onChange={handleSelectChange}
             />
+         
         </label>
         </div>
     </div>
